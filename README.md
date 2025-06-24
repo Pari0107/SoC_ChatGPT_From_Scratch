@@ -13,4 +13,6 @@ What I Have Learned (So Far)
 I have made notes summarizing my learnings throughout the project, the google doc link for the same is https://docs.google.com/document/d/1hjFC6zUD8Oey5jEuzFY3LHqQJuFaNqowWRHS8wKPaJc/edit?tab=t.0
 
 Repository Layout
-1. Harry Potter
+1. Harry Potter.txt - This contains the training data which I have used for the project
+2. train.py - This contains the code so far
+   This includes
