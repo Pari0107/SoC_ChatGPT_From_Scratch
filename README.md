@@ -16,3 +16,6 @@ Repository Layout
 1. Harry Potter.txt - This contains the training data which I have used for the project
 2. train.py - This contains the code so far
    This includes code for word embedding, Bigram language model, loss and optimizer for backpropagation.
+
+Resources/ Videos Used 
+
