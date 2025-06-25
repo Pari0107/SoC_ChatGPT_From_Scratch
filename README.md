@@ -1,4 +1,4 @@
-Coding ChatGPT from Scratch – SoC IIT Bombay 2025
+Coding ChatGPT from Scratch – SoC IIT Bombay 2025 _bold_
 
 Mentee - Pari Soni, 24b4505
 Mentor - Shivtej Ghatage
@@ -18,4 +18,6 @@ Repository Layout
    This includes code for word embedding, Bigram language model, loss and optimizer for backpropagation.
 
 Resources/ Videos Used 
+1. https://www.youtube.com/watch?v=QUT1VHiLmmI
+2. https://www.youtube.com/watch?v=vmEHCJofslg
 
