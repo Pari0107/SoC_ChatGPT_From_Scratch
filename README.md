@@ -16,13 +16,15 @@ I have made notes summarizing my learnings throughout the project, the google do
 
 ### **Repository Layout**
 1. Harry Potter.txt - This contains the training data which I have used for the project
-2. train.py - This contains the code so far
-   This includes code for word embedding, Bigram language model, loss and optimizer for backpropagation.
+2. train.py - This contains the main code for training and generating data.
 
+   This includes code for word embedding, Creating training and test data, Bigram language model, Multi head attention, Feed forward layers, 
+ loss and optimizer for backpropagation and generating from the model.
 ### **Resources/ Videos Used**
 1. [Introduction to numpy](https://www.youtube.com/watch?v=QUT1VHiLmmI)
 2. [Introduction to Pandas](https://www.youtube.com/watch?v=vmEHCJofslg)
 3. [Matplotlib](https://www.youtube.com/watch?v=DAQNHzOcO5A)
 4. [Neural Networks](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF) - Videos 74 to 91
 5. [Introduction to Pytorch](https://www.youtube.com/watch?v=OIenNRt2bjg)
+6. [Final Project](https://www.youtube.com/watch?v=kCc8FmEb1nY)
 
