@@ -18,13 +18,10 @@ dropout = 0.2
 with open("Harry Potter.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
-#print(text[:500])
-#print ("length of dataset", len(text))
 
 chars = sorted(list(set(text)))
 vocab_size = len(chars)
-#print(''.join(chars))
-#print(vocab_size)
+
 
 #convert tokens to numbers
 stoi = { ch:i for i,ch in enumerate(chars) }
@@ -34,25 +31,13 @@ decode = lambda l: ''.join([itos[i] for i in l]) #decoder
 #print(encode("Pari is the greatest"))
 
 data = torch.tensor(encode(text), dtype=torch.long)
-#print(data.shape, data.dtype)
-#print(data[:1000])
-#metry = data[:1000]
-#print(decode(metry.tolist()))
 
 # Train and test splits
 n = int(0.9*len(data)) # first 90% will be train, rest val
 train_data = data[:n]
 val_data = data[n:]
 
-#block_size = 8
-#train_data[:block_size+1]
-#x = train_data[:block_size]
-#y = train_data[1:block_size+1]
-
 torch.manual_seed(69) #used for reproducablility
-#batch_size = 4 #parallel programming
-#block_size = 8 #each with 8 inputs
-
 
 def get_batch(split):
     # generate a small batch of data of inputs x and targets y
@@ -63,16 +48,13 @@ def get_batch(split):
     x, y = x.to(device), y.to(device)
     return x, y
 
-#print('inputs:', xb.shape, xb)
-#print('targets:', yb.shape, yb)
-
-##Self-Attention
+# **Self-Attention**
 #Query - What I am looking for
 #Key - What I am
 
 
 class Head(nn.Module):
-    """ one head of self-attention """
+# one head of self-attention
 
     def __init__(self, head_size):
         super().__init__()
@@ -100,7 +82,7 @@ class Head(nn.Module):
         return out
 
 class MultiHeadAttention(nn.Module):
-    """ multiple heads of self-attention in parallel """
+# multiple heads of self-attention in parallel
 
     def __init__(self, num_heads, head_size):
         super().__init__()
@@ -114,8 +96,10 @@ class MultiHeadAttention(nn.Module):
         return out
 
 class FeedFoward(nn.Module):
-    """ a simple linear layer followed by a non-linearity """
-
+# a simple linear layer followed by a non-linearity
+# Improves each token's meaning after attention, one at a time
+# Changes each token's info to help the model understand better
+    
     def __init__(self, n_embd):
         super().__init__()
         self.net = nn.Sequential(
@@ -129,7 +113,7 @@ class FeedFoward(nn.Module):
         return self.net(x)
 
 class Block(nn.Module):
-    """ Transformer block: communication followed by computation """
+# Transformer block: communication followed by computation
 
     def __init__(self, n_embd, n_head):
         # n_embd: embedding dimension, n_head: the number of heads we'd like
