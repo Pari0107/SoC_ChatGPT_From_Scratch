@@ -11,7 +11,7 @@ Mentor - Shivtej Ghatage
 3. Understand the basics and under the hood principles of Chatgpt 
 
 
-### **What I Have Learned (So Far)**
+### **What I Have Learned**
 I have made notes summarizing my learnings throughout the project, the google doc link for the same is https://docs.google.com/document/d/1hjFC6zUD8Oey5jEuzFY3LHqQJuFaNqowWRHS8wKPaJc/edit?tab=t.0
 
 ### **Repository Layout**
